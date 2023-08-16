@@ -1,9 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { merge } from './function'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('merge', () => {
+  expect(merge([1,10,15,20], [21,3,6,87])).toStrictEqual([1,3,6,10,15,20,21,87]);
 });
